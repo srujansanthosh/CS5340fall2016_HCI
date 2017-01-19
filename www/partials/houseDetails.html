@@ -1,0 +1,68 @@
+﻿<div layout="row">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#/home">Home</a></li>
+        <li class="breadcrumb-item"><a href="#/houseSearch">House Search</a></li>
+        <li class="breadcrumb-item active">House Details</li>
+    </ol>
+    <span flex></span>
+</div>
+<md-content>
+    <div layout="column" class="container" style="overflow-y:scroll;height:610px">
+
+
+        <h4>House Details</h4>
+        <span>
+            <md-button ng-click="photo()">Photos</md-button>
+            <md-button ng-click="map()">Map</md-button>
+            <md-button ng-click="toggle()" >
+                <md-icon md-svg-icon="images/empty_star.svg"  ng-show="!fill"></md-icon>
+                <md-icon md-svg-icon="images/filled_star.svg"  ng-show="fill"></md-icon>
+            </md-button>
+            <img ng-src="{{ image.src }}" style="height:20em" />
+        </span>
+        <div id="toaster"></div>
+        <div >
+            <h4>10 Jamaics Plain,</h4>
+            <span><h4>Boston, MA 02120</h4></span>
+            <span>3 beds . 2 baths . 1100 sqft</span>
+            <md-divider></md-divider>
+            <p>Wonderful Hyde Park neighborhood in convenient location.  New architectural roof, insulation, replacement windows and vinyl siding.  Stunning kitchen renovation featuring white cabinets, quartz counters, stainless Frigidaire appliances, Harwdoods throughout, marble bath floors, tile shower. Huge walkout bonus room in basement with closet, custom built in and half bath can be used as a family room or a third bedroom/teen suite.  Brand new high efficiency gas furnace and on demand hotwater heater.  Almost everything has been redone, nothing to do but move in and enjoy!</p>
+        </div>
+        <form action=" " method="post" id="contact_form">
+            <fieldset>
+                <h3>Contact Seller</h3>
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  placeholder="Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input placeholder="Phone" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Message</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <textarea placeholder="Leave Your Message Here" class="form-control" type=""></textarea>
+                        </div>
+                    </div>
+                </div>
+                <md-button class="md-raised md-primary" ng-click="contact()">CONTACT SELLER</md-button>
+            </fieldset>
+        </form>
+           
+</div>
+</md-content>

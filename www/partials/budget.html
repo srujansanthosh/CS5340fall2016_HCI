@@ -1,0 +1,80 @@
+﻿<div layout="row">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#/home">Home</a></li>
+        <li class="breadcrumb-item active">Set Budget</li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2"><h3><b> Affordability Calculator </b></h3></div>
+</div>
+
+
+<div class="container">
+    <h4>Select Loan Term</h4>
+    <div layout="row">
+        <md-input-container style="margin-right: 10px;">
+            <label>Select </label>
+            <md-select ng-model="size">
+                <md-option ng-repeat="size in sizes" value="{{size}}">{{size}}</md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+</div>
+
+<div class="container">
+   
+        <div class="row">
+            <div class="col-xs-8 "><h4>Monthly Household Income</h4></div>
+        </div>
+
+        <div style="margin: 5px; padding:5px">
+            <md-slider-container>
+                <span class="md-body-1">$</span>
+                <md-slider flex="" ng-model="color.blue" min="20" max="255" aria-label="blue" id="blue-slider" class="md-primary">
+                </md-slider>
+                <md-input-container>
+                    <input flex="" type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
+                </md-input-container>
+            </md-slider-container>
+        </div>
+</div>
+
+<div class="container">
+    
+        <div class="row">
+            <div class="col-xs-8 "><h4>Monthly Expenses</h4></div>
+        </div>
+
+        <div style="margin: 5px; padding:5px">
+            <md-slider-container>
+                <span>$</span>
+                <md-slider flex="" min="30" max="455" ng-model="color.red" aria-label="red" id="red-slider">
+                </md-slider>
+                <md-input-container>
+                    <input flex="" type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+                </md-input-container>
+            </md-slider-container>
+        </div>
+</div>
+
+<div class="container">
+        <div class="row">
+            <div class="col-xs-8 "><h4>Down Payment</h4></div>
+        </div>
+
+        <div style="margin: 5px; padding:5px">
+            <md-slider-container>
+                <span>$</span>
+                <md-slider flex="" ng-model="color.green" min="45" max="350" aria-label="green" id="green-slider" class="md-accent">
+                </md-slider>
+                <md-input-container>
+                    <input flex="" type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
+                </md-input-container>
+        </div>
+</div>
+
+
+<div class="container">
+    <md-button class="md-raised md-primary" href="#/budget1" ng-click="done()">Get your Results</md-button>
+</div>
+

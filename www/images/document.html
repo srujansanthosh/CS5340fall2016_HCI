@@ -1,0 +1,88 @@
+<md ng-controller="docController" ng-cloak=""  class="listdemoBasicUsage" ng-app="app">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <md-toolbar class="md-hue-3">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings" ng-disabled="false" ng-click="toggleLeft()">
+                <md-icon md-svg-icon="images/menu.svg"></md-icon>
+            </md-button>
+            <span class="white-color">Document Manager</span>
+        </div>
+    </md-toolbar>
+
+    <md-content class="md-padding">
+        <md-tabs md-dynamic-height="" md-border-bottom="">
+            <md-tab label="Documents">
+        <div class="ext-content">
+
+        <md-list flex="">
+            <md-list-item class="md-2-line" ng-repeat="phone in phones">
+
+                <img ng-src="{{phone.options.face}}?25" class="md-avatar" alt="{{phone.options.face}}" >
+                <div class="md-list-item-text" ng-class="{'md-offset': phone.options.offset }">
+                    <h3> {{ phone.number }} </h3>
+                    <p> {{ phone.type }} </p>
+                </div>
+                <md-button class="md-secondary md-icon-button" ng-click="doSecondaryAction($event)"  aria-label="call">
+                    <span class="glyphicon glyphicon-download-alt"></span>
+                </md-button>
+            </md-list-item>
+        </md-list>
+        </div>
+            </md-tab>
+            <md-tab label="Scan">
+                <div class="ext-content">
+
+                    <img ng-src="./images/scan.png"  class="fit">
+
+                </div>
+            </md-tab>
+            <md-tab label="Upload">
+                <div class="ext-content">
+                    <br><br>
+                    <div style="position:relative;">
+                        <center>
+                        <a class='btn btn-primary' href='javascript:;'>
+                            <span class="upload_txt">UPLOAD</span>
+                            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="70"  onchange='$("#upload-file-info").html($(this).val());'>
+                        </a>
+                        &nbsp;
+                        <span class='label label-info' id="upload-file-info"></span>
+                        </center>
+                    </div>
+
+                    <br><br>
+                    <center> <button type="button" class="preview_btn" ng-click="showPreview()" >
+
+
+                        <span>Preview</span>
+                    </button></center>
+                    <br><br>
+                    <center><img ng-src="./images/text-sample.gif" class="preview" ng-show="showImage"></center>
+
+
+
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+
+</div>
+
+
+
+<div flex-gt-sm="50" flex="">
+
+    </md-list>
+    </md-content>
+</div>
+
+</div>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
+-->

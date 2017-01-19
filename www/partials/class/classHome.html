@@ -1,0 +1,36 @@
+<div layout="row">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#/home">Home</a></li>
+        <li class="breadcrumb-item active">HomeBuyer 101 Classes</li>
+    </ol>
+</div>
+
+<md-content>
+    <div class="container">
+    <div layout="column" layout-align="center center">
+        <h3>Welcome To The Class!</h3>
+        <!--<div><i>Please choose from options..</i></div>-->
+    </div>
+    </div><br>
+    <div class="container" layout="column" layout-align="center">
+        <md-input-container>
+            <label>Choose class type</label>
+            <md-select ng-model="classType" placeholder="Choose Class Type" ng-href="#/{{classType}}" ng-change="onChange()">
+                <md-option value="webinar">Webinar</md-option>
+                <md-option value="seminar">Seminar</md-option>
+            </md-select>
+            <!--<md-button class="md-raised md-primary">Primary</md-button>-->
+
+        </md-input-container>
+        <md-button class="md-raised md-primary" href="#/aid">Government Financial Aid</md-button>
+        <md-button class="md-raised md-primary" href="#/forum">Forum</md-button>
+
+    </div>
+</md-content>
+
+
+
+
+
+
+<!--onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);-->

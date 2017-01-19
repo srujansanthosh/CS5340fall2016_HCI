@@ -1,0 +1,86 @@
+﻿<div class="container">
+        <!--Areas-->
+        <h4>Choose Multiple Areas:</h4>
+
+        <md-chips-select ng-model="selectedAreas" select-items="listAreas" main-title="name" ng-style="background:white;opacity:1"></md-chips-select>
+
+
+
+        <!--<md-input-container style="margin-right: 10px;">
+            <md-select multiple ng-model="areas" placeholder="please select">
+                <md-option ng-repeat="a in areas" value="{{a}}">{{a}}</md-option>
+            </md-select>
+        </md-input-container> -->
+            <!--Proximity Filters-->
+            <div ng-show="chip">
+            <h4>I wanna live nearby:</h4>
+            <md-chips-select ng-model="selectedItems"   select-items="listItems" main-title="name"></md-chips-select>
+
+
+
+            <!--Property Type-->
+            <h4>Property Types:</h4>
+            <div layout="row">
+                <div layout="column">
+                    <md-checkbox>Apartment</md-checkbox>
+                    <md-checkbox>Condo</md-checkbox>
+                    <md-checkbox>Duplex</md-checkbox>
+                </div>
+                <div layout="column">
+                    <md-checkbox>House</md-checkbox>
+                    <md-checkbox>Townhouse</md-checkbox>
+                </div>
+            </div>
+
+            <!--Price Range-->
+            <h4>Set Min & Max Price Range:</h4>
+            <div layout="row">
+                <md-input-container style="margin-right: 10px;">
+                    <label>Min Price</label>
+                    <input ng-model="minPrice" type="number" step="1">
+                </md-input-container>
+                <md-input-container>
+                    <label>Max Price</label>
+                    <input ng-model="maxPrice" type="number" step="1">
+                </md-input-container>
+            </div>
+
+            <!--Beds-->
+            <h4>Beds:</h4>
+            <div layout="row ">
+                <md-input-container style="margin-right: 10px;">
+                    <label>Min </label>
+                    <md-select ng-model="beds">
+                        <md-option ng-repeat="bed in beds" value="{{bed}}">{{bed}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container style="margin-right: 10px;">
+                    <label>Max </label>
+                    <md-select ng-model="beds">
+                        <md-option ng-repeat="bed in beds" value="{{bed}}">{{bed}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <!--Baths-->
+            <h4>Baths:</h4>
+            <div layout="row">
+                <md-input-container style="margin-right: 10px;">
+                    <label>Min </label>
+                    <md-select ng-model="baths">
+                        <md-option ng-repeat="bath in baths" value="{{bath}}">{{bath}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container style="margin-right: 10px;">
+                    <label>Max </label>
+                    <md-select ng-model="baths">
+                        <md-option ng-repeat="bath in baths" value="{{bath}}">{{bath}}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+    <md-button class="md-raised md-primary" ng-href="#/houseSearch">See Results</md-button>
+
+            </div>
+            
+</div>

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MONUM APP</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css" />
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <!-- Angular Tour js -->
+    <script src="../bower_components/angular-tour/dist/angular-tour-tpls.min.js"></script>
+    <script src="../bower_components/md-chips-select/dist/md-chips-select.js"></script>
+    <script src="../bower_components/angular-carousel/dist/angular-carousel.min.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.min.js"></script>
+    
+    <!-- Project Page JS -->
+    <script src="index.js"></script>
+    <script src="partial-js/home.js"></script>
+    <script src="partial-js/credit.js"></script>
+    <script src="partial-js/budget.js"></script>
+    <script src="partial-js/houseSearch.js"></script>
+    <script src="partial-js/houseDetails.js"></script>
+    <script src="partial-js/filters.js"></script>
+    <script src="partials/class/classHome.js"></script>
+    <script src="partials/class/aid.js"></script>
+    <script src="partials/class/forum.js"></script>
+    <script src="partial-js/banker.js"></script>
+    <script src="partial-js/contact.js"></script>
+    <script src="partial-js/lawyer.js"></script>
+    <script src="partial-js/realtor.js"></script>
+    <script src="partials/class/seminar.js"></script>
+    <script src="partials/class/webinar.js"></script>
+    <script src="partial-js/faq.js"></script>
+    <script src="partial-js/helpline.js"></script>
+
+    <script src="partial-js/mortgages.js"></script>
+    <script src="partial-js/preapprove.js"></script>
+    <script src="partial-js/turnin.js"></script>
+
+    <script src="partial-js/connect.js"></script>
+    <script src="partial-js/document.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../bower_components/angular-tour/dist/angular-tour.css" />
+    <link rel="stylesheet" href="../bower_components/md-chips-select/dist/md-chips-select.css" />
+
+</head>
+
+<body ng-app="myApp">
+    <!-- Navigation -->
+    <div ng-cloak="" ng-controller="appController"  ng-init = "init()">
+        <!-- Side Menu-->
+        <md-sidenav md-component-id="left" class="md-sidenav-left" md-enable-backdrop="">
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Hello User!</h1>
+            </md-toolbar>
+            <md-content>
+                <md-button href="#/home" ng-click="closeSideNav()"><h4><md-icon md-svg-src="images/home_icon.svg"></md-icon>Home</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#/class" ng-click="closeSideNav()" id="classes"><h4><md-icon md-svg-src="images/class.svg"></md-icon>HomeBuyer 101 Classes</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#/connect" ng-click="closeSideNav()"><h4><md-icon md-svg-src="images/connect.svg"></md-icon>Connect</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#/document" ng-click="closeSideNav()"><h4><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Doc Manager</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#/faq" ng-click="closeSideNav()"><h4><md-icon md-svg-src="images/faq_icon.svg"></md-icon>FAQs</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#" ng-click="closeSideNav()"><h4><md-icon md-svg-src="images/doc_icon.svg"></md-icon>Forms</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#/helpline" ng-click="closeSideNav()"><h4><md-icon md-svg-src="images/help_icon.svg"></md-icon>Helpline</h4></md-button>
+            </md-content>
+            <md-content>
+                <md-button href="#" ng-click="closeSideNav()"><h4><md-icon md-svg-src="images/settings_icon.svg"></md-icon>Settings</h4></md-button>
+            </md-content>
+
+        </md-sidenav>
+        <!-- Top Status bar -->
+        <md-toolbar class="md-hue-2" layout="row" layout-align="start end">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-disabled="false" ng-click="toggleLeft()">
+                    <md-icon md-svg-icon="images/menu.svg"></md-icon>
+                </md-button>
+                <h2 id="monum">
+                    <span> {{menuItem}}</span>
+                </h2>
+
+                <span flex></span>
+                <span ></span><md-button class="md-icon-button"  ng-click="showFilters()" ng-hide="hideFilter">
+                    <img src="images/Picture1.png" style="width:24px;height:24px">
+                </md-button>
+            </span>
+                <md-button class="md-icon-button" href="#/home" aria-label="home">
+                    <md-icon md-svg-icon="images/home.svg"></md-icon>
+                </md-button>
+              
+            </div>
+        </md-toolbar>
+    </div>
+   
+    <!-- Center Content-->
+    <div ng-view></div>
+        
+    
+    
+</body>
+</html>

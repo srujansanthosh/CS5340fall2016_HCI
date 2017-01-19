@@ -1,0 +1,195 @@
+﻿<!-- partial-home -->
+<div layout="row" layout-align="center center">
+    
+</div>
+
+<div id="steps">
+    <div>
+        <div class="row">&nbsp;</div>
+        <div class="container" layout="row" layout-align="center"><i>Click on Each Option to expand it..</i></div>
+
+        <!-- AFFORDABILITY -->
+
+
+
+        <md-button class="home_button md-fab" data-toggle="collapse" data-target="#p1" ng-show="!demoComplete">
+
+            <h4 id="first-step">1</h4>
+        </md-button>
+        <md-button class="home_button" data-toggle="collapse" data-target="#p1" ng-show="demoComplete" >
+            <md-icon md-svg-src="images/check.svg"></md-icon>
+        </md-button>
+        <md-button data-toggle="collapse" data-target="#p1" ><b>FIND YOUR AFFORDABILITY</b></md-button>
+        <div id="p1" name="p1" class="collapse container">
+            <div class="container">
+                <div class="container tab">
+                    <div class="ro">
+                <span class="glyphicon glyphicon-ok Tick co" ng-show="showCheckCredit"></span> &nbsp;
+                <a href="#/credit" class="co">GET YOUR CREDIT SCORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container tab">
+                    <div class="ro">
+              &nbsp; <span class="glyphicon glyphicon-ok Tick co" ng-show="showcheckBudget"></span> &nbsp;
+                <a href="#/budget" class="co">SET YOUR BUDGET</a> &nbsp;
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <!-- TEAM -->
+    <div>
+        <md-button class="md-fab" data-toggle="collapse" data-target="#p3">
+            <h4>2</h4>
+        </md-button>
+        <md-button data-toggle="collapse" data-target="#p3"><b>ASSEMBLE TEAM</b></md-button>
+
+        <div id="p3" name="p3" class="collapse container">
+            <div class="container tab">
+                <div class="ro">
+                    <span class="glyphicon glyphicon-ok Tick co" ng-show="bankerChecked" ></span> &nbsp;
+                <a href="#/bankers">MORTGAGE LENDER</a> &nbsp;
+                </div>
+            </div>
+
+            <div class="container tab">
+                <div class="ro">
+                <span class="glyphicon glyphicon-ok Tick co" ng-show="bankerChecked" ></span> &nbsp;
+
+                <a href="#/bankers" class="co">BANKERS</a> &nbsp;
+                </div>
+            </div>
+            <div class="container tab">
+                <div class="ro">
+                <span class="glyphicon glyphicon-ok Tick co" ng-show="lawyerChecked"></span> &nbsp;
+
+                <a href="#/lawyers" class="co">LAWYERS</a> &nbsp;
+                </div>
+            </div>
+            <div class="container tab">
+                <div class="ro">
+                <span class="glyphicon glyphicon-ok Tick co" ng-show="realtorChecked"></span> &nbsp;
+
+                <a href="#/realtors" class="co">REALTORS</a> &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MORTGAGES -->
+    <div>
+        <md-button class="md-fab" data-toggle="collapse" data-target="#p4">
+            <h4>3</h4>
+        </md-button>
+        <md-button data-toggle="collapse" data-target="#p4"><b>UNDERSTAND MORTGAGES</b></md-button>
+        <div id="p4" name="p4" class="collapse container">
+            <div class="container tab" >
+                <div class="ro">
+                <span class="glyphicon glyphicon-ok Tick co" ng-show="preapprovedChecked"></span>
+
+                <a ng-href="{{preapprove}}" class="co" ng-click="showPreApprCheck()">GET PRE-APPROVED</a> &nbsp;
+                </div>
+            </div>
+            <div class="container tab" >
+                <div class="ro">
+                <span class="glyphicon glyphicon-ok Tick co" ng-show="turninChecked"></span>
+
+                <a ng-href="{{turnin}}" class="co" ng-click="showTurnInChecked()">WHAT TO TURN IN TO YOUR LENDER</a> &nbsp;
+                </div>
+            </div>
+            <div class="container tab">
+                <div class="ro">
+                        <span class="glyphicon glyphicon-ok Tick co" ng-show="mortgagesChecked"></span>
+
+                    <a ng-click="showMortagage()" ng-href="{{mortages}}" class="co" >UNDERSTAND YOUR MORTGAGES</a> &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOUSE SEARCH -->
+    <div>
+        <md-button class="md-fab" ng-click="gotoHomeSearch()">
+            <h4 id="second-step">2</h4>
+        </md-button>
+        <md-button ng-href="#/houseSearch"><b>HOUSE SEARCH</b></md-button>
+    </div>
+    
+    <!-- OFFER -->
+    <div>
+        <md-button class="md-fab" ng-click="gotoMakeOffer()">
+            <h4>4</h4>
+        </md-button>
+        <md-button ng-href="#/offer"><b>MAKE AN OFFER & CLOSING</b></md-button>
+    </div>
+</div>
+
+
+
+<tour step="currentStep">
+    <virtual-step tourtip="Let's Get Started with a quick intro to MONUM App" 
+                  tourtip-element="#monum"
+                  tourtip-next-label="Next"
+                  tourtip-placement="bottom"
+                  tourtip-step="0">
+    </virtual-step>
+    <virtual-step tourtip="These numbered steps are the main steps you have to FOLLOW IN SEQUENCE to achieve your Home Owning Dream!"
+                  tourtip-element="#first-step"
+                  tourtip-next-label="Next"
+                  tourtip-placement="right"
+                  tourtip-step="1">
+    </virtual-step>
+    <virtual-step tourtip="Now click on Step 1 to expand it"
+                  tourtip-element="#first-step"
+                  tourtip-next-label="Next"
+                  tourtip-placement="right"
+                  tourtip-step="2">
+    </virtual-step>
+    <virtual-step tourtip="These are the substeps that will be checked after you finish them which indicates your progress"
+                  tourtip-element="#p1"
+                  tourtip-next-label="Next"
+                  tourtip-placement="top"
+                  tourtip-step="3">
+    </virtual-step>
+    <virtual-step tourtip="It will look like this!"
+                  tourtip-element="#p1"
+                  tourtip-next-label="Next"
+                  tourtip-placement="top"
+                  tourtip-step="4"
+                  on-show="check()"
+                  on-proceed ="uncheck()">
+    </virtual-step>
+    <virtual-step tourtip="After finishing all the steps your progress will change, complete all the steps similarly"
+                  tourtip-element="#p1"
+                  tourtip-next-label="Next"
+                  tourtip-placement="bottom"
+                  tourtip-step="5"
+                  on-show="progressCheck()"
+                  on-proceed="progressUncheck()">
+    </virtual-step>
+    <virtual-step tourtip="You can register for online/onground HomeBuyer 101 classes from here!!"
+                  tourtip-element="#p1"
+                  tourtip-placement ="top"
+                  tourtip-step="6"
+                  on-show="openSideMenu()">
+    </virtual-step>
+    <div layout="row">&nbsp;</div>
+    <div layout="row">&nbsp;</div>
+    <div layout="row">&nbsp;</div>
+    <div layout="row" layout-align="center">
+        <md-button class="md-raised md-primary" ng-click="openTour()">
+            Take a Quick Tour
+        </md-button>
+        <md-button class="md-raised md-primary" ng-click="showInfo()">Show Info About App</md-button>
+    </div>
+</tour>
+
+
+
+

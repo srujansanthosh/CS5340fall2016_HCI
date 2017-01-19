@@ -1,0 +1,35 @@
+﻿<div layout="row">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#/home">Home</a></li>
+        <li class="breadcrumb-item active">Credit</li>
+    </ol>
+</div>
+<div layout="column" layout-align="center center">
+    
+    <md-input-container>
+        <label>Enter your credit score</label>
+        <input type="text" ng-model="color" md-maxlength="3">
+    </md-input-container>
+    <md-button class="md-raised md-primary" ng-click="showme=true">
+        GET YOUR CREDIT REPORT
+    </md-button>
+    <img src="images/credit.png" title="Click Me!!" ng-show="showme" ng-click="showTip()"/>
+
+    <h3> Don't Have Credit Score?</h3>
+    <i>We Have Got You Covered!!</i>
+    <div class="container" style="height: 400px; overflow-y: scroll;">
+        <p>Check your credit card or other loan statement. Many major credit card companies and some auto loan companies have begun to provide credit scores for all their customers on a monthly basis. The score is usually listed on your monthly statement, or can be found by logging in to your account online.</p>
+
+            <p>Talk to a non-profit counselor. Non-profit credit counselors and HUD-approved housing counselors can often provide you with a free credit report and score and help you review them.</p>
+
+            <p>Use a credit score service. Many services and websites advertise a “free credit score.” Some sites may be funded through advertising and not charge a fee. Other sites may require that you sign up for a credit monitoring service with a monthly subscription fee in order to get your “free” score. These services are often advertised as “free” trials, but if you don’t cancel within the specified period (often as short as one week), you could be on the hook for a monthly fee. Before you sign up to try one of these services, be sure you know what you are signing up for and how much it really costs.</p>
+
+            <p>Buy a score. You can buy a score directly from the credit reporting companies. You can buy your FICO credit score at myfico.com. Other services may also offer scores for purchase. If you decide to purchase a credit score, you are not required to purchase credit protection, identity theft monitoring, or other services that may be offered at the same time.</p>
+        
+    </div>
+    <div>
+        <md-button class="md-raised md-primary" ng-click="done()">
+            I AM DONE!!
+        </md-button>
+    </div>
+</div>
